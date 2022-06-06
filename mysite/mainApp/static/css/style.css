@@ -1,0 +1,308 @@
+@import url('fonts.css');
+@import url('reset.css');
+
+html {
+    font-family: 'Roboto slab', sans-serif;
+}
+
+.container {
+    width: 95%;
+    height: 95%;
+    max-width: 0 auto;
+    position: relative;
+}
+
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header {
+    height: 60px;
+    background-color: gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 10px 0 rgb(70, 67, 67);
+    z-index: 999;
+}
+
+.header-logo {
+    width: 20%;
+}
+
+.logo-link {
+    font-size: 30px;
+    font-weight: bold;
+    color: #3a3a3a;
+}
+
+.logo-link:hover {
+    color: tomato;
+    border-color: tomato;
+}
+
+.header-logo li ul {
+    position: absolute;
+    top: 46px;
+    left: 0px;
+    width: 150px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transiton: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -transition: opacity 0.2s;
+}
+
+.header-logo li ul li {
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background: none;
+    display: block;
+    color: #fff;
+    text-shadow: 0 -1px 0 #000;
+}
+
+.header-logo li ul li:hover {
+    background: none;
+}
+
+.header-logo li:hover ul {
+    display: block;
+    background: gray;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-logo li ul li a {
+    font-size: 21px;
+    font-weight: 500;
+    color: #3a3a3a;
+    text-transform: all 1.7s;
+    border-bottom: 2px solid transparent;
+}
+
+.header-logo li ul li a:hover {
+    color: #856404;
+}
+
+.header-menu {
+    width: 50%;
+}
+
+.home-menu {
+    width: 5%;
+    height: 25%;
+    position: relative;
+}
+
+.menu-link {
+    font-size: 21px;
+    font-weight: 500;
+    color: #3a3a3a;
+    text-transform: all 0.7s;
+    border-bottom: 2px solid transparent;
+}
+
+.menu-link:hover {
+    color: tomato;
+    border-color: tomato;
+}
+
+.section {
+    height: 100vh;
+    padding-top: 60px;
+}
+
+#home {
+    background-image: url(../mainApp/images/pexels-kelson-downes-1149137.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.home-title {
+    position: absolute;
+    color: #0c5460;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 50px;
+    font-weight: 700;
+    height: 100%;
+    padding: 10px 0;
+}
+
+#about {
+    background-color: #f5f5f5;
+}
+
+.about-photo {
+    width: 30%;
+    height: 70vh;
+    background-image: url(../mainApp/images/img-profile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-info {
+    width: 60%;
+}
+
+.about-box {
+    margin-bottom: 20px;
+}
+
+.about-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.about-box p {
+    font-size: 1em;
+    font-weight: 400;
+    color: #575656;
+    line-height: 20px;
+}
+
+#contacts {
+    background-color: whitesmoke;
+}
+
+.contacts-info {
+    width: 30%;
+}
+
+.contacts-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.contacts-map {
+    width: 60%;
+    height: 70vh;
+    border: 10px solid black;
+}
+
+.footer {
+    background-color: #dfdbdb;
+    height: 40px;
+    z-index: 999;
+}
+
+.footer p {
+    text-align: center;
+    line-height: 40px;
+
+}
+
+#works {
+    background-color: #f5f5f5;
+}
+
+.work-photo {
+    width: 100%;
+    height: 70vh;
+    background-image: url(../mainApp/images/person-holding.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.work-info {
+    width: 60%;
+}
+
+
+
+.page-header{
+    width: 100%;
+    height: 40%;
+    position: relative;
+    /*height: 60px;*/
+    background-color: gray;
+    margin-top: 0 ;
+    /*left: 0;*/
+    /*right: 0;*/
+    box-shadow: 0 0 5px 0 rgb(70, 67, 67);
+    z-index: 999;
+}
+
+.page-header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #3a3a3a;
+    text-decoration: none;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    background-image: url("../mainApp/images/pexels-gabriel-peter-696644.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+ h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+h1{
+    color: whitesmoke;
+}
+.date {
+    float: right;
+    color: whitesmoke;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #3a3a3a;
+    float: right;
+    font-size: 26pt;
+    margin-right: 10px;
+}
+
+.post {
+    margin-bottom: 70px;
+    position: page;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: whitesmoke;
+}
+.col-cm-12, .thumbnail, .caption{
+    background-color: rgba(173,173,173,0.63);
+}
+.col-cm-12:hover{
+    color: #3a3a3a;
+}
+.current{
+    color: whitesmoke;
+}

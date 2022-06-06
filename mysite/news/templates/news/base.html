@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block head_title %}SVOE AVTO{% endblock head_title%}</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/post.css' %}">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" type="text/css">
+    <style>
+        {% block style %}
+        {% endblock style %}
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <a href="/news/create/" class="top-menu"><span class="glyphicon glyphicon-plus"></span>Add post</a>
+        <a href="/"><h1>Main</h1></a>
+    </div>
+    {% include 'news/message_display.html' %}
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p>@Copyright 2022 Group Python Dev(9.08)</p>
+            </div>
+        </footer>
+    </div>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+
+</html>

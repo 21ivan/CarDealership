@@ -1,0 +1,14 @@
+{% extends 'news/base.html' %}
+
+{% block head_title %}{{ object.title }}{% endblock head_title %}
+
+{% block content %}
+    <div class="col-sm-6 col-sm-offset-3"><br>
+        {% if object.image %}
+            <img src="{{ object.image.url }}" class="img-responsive">
+        {% endif %}
+        <h1>{{ object.title }}</h1>
+        <small>{{ object.timestamp }}</small>
+        <p>{{ object.post|linebreaks }}</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'news/base.html' %}
+
+{% block content %}
+    <div class="col-sm-6 col-sm-offset-3"><br>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="Create post!">
+        </form>
+    </div>
+{% endblock %}
