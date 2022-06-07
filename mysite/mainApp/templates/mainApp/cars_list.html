@@ -1,0 +1,35 @@
+{% extends "mainApp/wrapper.html" %}
+{% block content %}
+{#    <li>{{ title }}</li>#}
+    {% for query in queryset %}
+        <div class="about-photo">
+            {% if query.image %}
+                <img src="{{ query.image.url }}" class="about-photo">
+            {% endif %}
+        </div>
+        <div class="about-info">
+            <div class="about-box">
+                <h3>{{ query.model }}</h3>
+                <p>{{ query.price }} usd</p>
+                <p>{{ query.capacity }}</p>
+                <p>{{ query.car_type }}</p>
+                <p>{{ query.year }}</p>
+                <p>{{ query.engine_type }}</p>
+            </div>
+        </div>
+    {% endfor %}
+        <div class="paginator">
+            <span class="step-link">
+                {% if queryset.has_previous %}
+                    <a href="?{{ page_request_var }}={{ queryset.previous_page_number }}">Previous</a>
+                {% endif %}
+                <span class="current">
+                    Page {{ queryset.number }} of {{ queryset.paginator.num_pages }}
+                </span>
+                {% if queryset.has_next %}
+                    <a href="?{{ page_request_var }}={{ queryset.next_page_number }}">Next</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+{% endblock %}

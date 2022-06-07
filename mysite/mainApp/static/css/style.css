@@ -46,7 +46,7 @@ html {
     border-color: tomato;
 }
 
-.header-logo li ul {
+.header-logo ul {
     position: absolute;
     top: 46px;
     left: 0px;
@@ -64,7 +64,7 @@ html {
     -transition: opacity 0.2s;
 }
 
-.header-logo li ul li {
+.header-logo ul li {
     padding-left: 20px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -74,18 +74,18 @@ html {
     text-shadow: 0 -1px 0 #000;
 }
 
-.header-logo li ul li:hover {
+.header-logo ul li:hover {
     background: none;
 }
 
-.header-logo li:hover ul {
+.header-logo:hover ul {
     display: block;
     background: gray;
     opacity: 1;
     visibility: visible;
 }
 
-.header-logo li ul li a {
+.header-logo ul li a {
     font-size: 21px;
     font-weight: 500;
     color: #3a3a3a;
@@ -93,7 +93,7 @@ html {
     border-bottom: 2px solid transparent;
 }
 
-.header-logo li ul li a:hover {
+.header-logo ul li a:hover {
     color: #856404;
 }
 
@@ -121,7 +121,7 @@ html {
 }
 
 .section {
-    height: 100vh;
+    height: 110vh;
     padding-top: 60px;
 }
 
@@ -152,16 +152,17 @@ html {
 }
 
 .about-photo {
-    width: 30%;
-    height: 70vh;
-    background-image: url(../mainApp/images/img-profile.jpg);
+    width: 50%;
+    height: 30vh;
+    margin-left: 100px;
+    /*background-image: url(../mainApp/images/img-profile.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .about-info {
-    width: 60%;
+    width: 40%;
 }
 
 .about-box {
@@ -179,6 +180,19 @@ html {
     font-weight: 400;
     color: #575656;
     line-height: 20px;
+}
+.paginator{
+    margin-top: 10px;
+    width: 100%;
+    height: 5%;
+}
+.paginator span span{
+    margin-left: 0px;
+    color: #3a3a3a;
+}
+.paginator span{
+    margin-left: 550px;
+    color: #3a3a3a;
 }
 
 #contacts {
@@ -220,7 +234,7 @@ html {
 .work-photo {
     width: 100%;
     height: 70vh;
-    background-image: url(../mainApp/images/person-holding.jpg);
+    /*background-image: url(../mainApp/images/person-holding.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

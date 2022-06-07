@@ -22,7 +22,7 @@ from .import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('contact/', views.contact, name='contact'),
+    path('cars/', views.cars_list, name='cars'),
     path('news/', include('news.urls'))
 ]
 
