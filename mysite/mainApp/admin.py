@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from mainApp.models import Brand, Car
+from mainApp.models import Brand, Car, Info
 
 
 class BrandAdmin(admin.ModelAdmin):
@@ -14,3 +14,4 @@ class BrandAdmin(admin.ModelAdmin):
 # admin.site.register(BrandAdmin)
 admin.site.register(Brand)
 admin.site.register(Car)
+admin.site.register(Info)

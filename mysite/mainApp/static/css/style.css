@@ -164,6 +164,21 @@ html {
 .about-info {
     width: 40%;
 }
+.about {
+    position: absolute;
+    height: 50vh;
+    margin-left: 20px;
+    text-align: center;
+}
+.about h2{
+    padding-bottom: 20px;
+    font-size: large;
+    font-weight: bold;
+}
+.about p{
+    position: center;
+    text-align-all: start;
+}
 
 .about-box {
     margin-bottom: 20px;
@@ -181,6 +196,8 @@ html {
     color: #575656;
     line-height: 20px;
 }
+
+
 .paginator{
     margin-top: 10px;
     width: 100%;
@@ -212,7 +229,7 @@ html {
 .contacts-map {
     width: 60%;
     height: 70vh;
-    border: 10px solid black;
+    border: 5px solid black;
 }
 
 .footer {

@@ -5,6 +5,14 @@ def upload_location(instance, filename):
     return f'{instance.id}, {filename}'
 
 
+class Info(models.Model):
+    title = models.CharField(max_length=170)
+    content = models.TextField(max_length=900)
+
+    def __str__(self):
+        return self.title
+
+
 class Brand(models.Model):
     brand_name = models.CharField(max_length=100)
     car_type = models.CharField(max_length=100)

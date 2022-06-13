@@ -1,6 +1,5 @@
 {% extends "mainApp/wrapper.html" %}
 {% block content %}
-{#    <li>{{ title }}</li>#}
     {% for query in queryset %}
         <div class="about-photo">
             {% if query.image %}
@@ -10,11 +9,13 @@
         <div class="about-info">
             <div class="about-box">
                 <h3>{{ query.model }}</h3>
+                <p class="navbar-brand">{{ query.brand }}</p>
                 <p>{{ query.price }} usd</p>
                 <p>{{ query.capacity }}</p>
                 <p>{{ query.car_type }}</p>
                 <p>{{ query.year }}</p>
                 <p>{{ query.engine_type }}</p>
+
             </div>
         </div>
     {% endfor %}

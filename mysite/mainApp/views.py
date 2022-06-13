@@ -1,12 +1,17 @@
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render
-from .models import Car
+from .models import Car, Info
+
 
 # Create your views here.
 
 
 def index(request):
-    return render(request, 'mainApp/homePage.html')
+    queryset = Info.objects.all()
+    context = {
+        'queryset': queryset
+    }
+    return render(request, 'mainApp/homePage.html', context)
 
 
 def cars_list(request):

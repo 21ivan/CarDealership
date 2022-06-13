@@ -1,39 +1,10 @@
 {% extends "mainApp/wrapper.html" %}
 {% block content %}
-    <div class="about-box">
-        <h3>Lead SD</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quos autem molestias
-            recusandae accusantium ipsam vero non cupiditate optio, porro natus quas rerum? Aperiam
-            inventore quisquam, facere maiores, corrupti consequatur quibusdam culpa aspernatur saepe
-            rerum
-            mollitia fuga tenetur error perspiciatis beatae. Ullam tempora molestiae possimus tenetur
-            facilis perferendis! Repellendus, quasi?</p>
-    </div>
-    <div class="about-box">
-        <h3>Senior SD</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quos autem molestias
-            recusandae accusantium ipsam vero non cupiditate optio, porro natus quas rerum? Aperiam
-            inventore quisquam, facere maiores, corrupti consequatur quibusdam culpa aspernatur saepe
-            rerum
-            mollitia fuga tenetur error perspiciatis beatae. Ullam tempora molestiae possimus tenetur
-            facilis perferendis! Repellendus, quasi?</p>
-    </div>
-    <div class="about-box">
-        <h3>Middle SD</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quos autem molestias
-            recusandae accusantium ipsam vero non cupiditate optio, porro natus quas rerum? Aperiam
-            inventore quisquam, facere maiores, corrupti consequatur quibusdam culpa aspernatur saepe
-            rerum
-            mollitia fuga tenetur error perspiciatis beatae. Ullam tempora molestiae possimus tenetur
-            facilis perferendis! Repellendus, quasi?</p>
-    </div>
-    <div class="about-box">
-        <h3>Junior SD</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quos autem molestias
-            recusandae accusantium ipsam vero non cupiditate optio, porro natus quas rerum? Aperiam
-            inventore quisquam, facere maiores, corrupti consequatur quibusdam culpa aspernatur saepe
-            rerum
-            mollitia fuga tenetur error perspiciatis beatae. Ullam tempora molestiae possimus tenetur
-            facilis perferendis! Repellendus, quasi?</p>
-    </div>
+    {% for query in queryset %}
+        <div class="about">
+            <h2>{{ query.title }}</h2>
+            <p>{{ query.content }}</p>
+        </div>
+    {% endfor %}
+
 {% endblock %}
