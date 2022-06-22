@@ -19,14 +19,23 @@ from django.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from rest_framework import routers
+from feeds.api import ArticlesViewSets
+from mainApp.api import BrandViewSets, CarViewSets
+
+router = routers.DefaultRouter()
+router.register('api/feed', ArticlesViewSets, 'feeds')
+router.register('api/car_list', CarViewSets, 'cars')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('mainApp.urls')),
-    path('news/', include('news.urls'))
+    path('feeds/', include('feeds.urls'))
 ]
 
 if settings.DEBUG:
+    urlpatterns += router.urls
     urlpatterns += static(settings.STATIC_URL,
                           document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL,

@@ -1,4 +1,4 @@
-{% extends 'news/base.html' %}
+{% extends 'feeds/base.html' %}
 
 
 {% block content %}
@@ -17,8 +17,8 @@
                             <p>{{ post.content|linebreaks|truncatechars:50 }}</p>
                             <p>published: {{ post.timestamp|timesince }} тому</p>
                             <a href="{{ post.get_absolute_url}}" class = "btn btn-warning" role="button">View</a>
-                            <a href="{% url 'news:post_update' post.id %}" class = "btn btn-warning" role="button">Update</a>
-                            <a href="{% url 'news:post_delete' post.id %}" class = "btn btn-danger" role="button">Delete</a>
+                            <a href="{% url 'post_update' post.id %}" class = "btn btn-warning" role="button">Update</a>
+                            <a href="{% url 'post_delete' post.id %}" class = "btn btn-danger" role="button">Delete</a>
                         </div>
                     </div>
                 </div>

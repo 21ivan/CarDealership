@@ -1,5 +1,5 @@
 from django import forms
-from news.models import Articles
+from feeds.models import Articles
 
 
 class ArticlesForm(forms.ModelForm):

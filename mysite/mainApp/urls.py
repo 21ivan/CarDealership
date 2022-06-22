@@ -23,7 +23,7 @@ from .import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('cars/', views.cars_list, name='cars'),
-    path('news/', include('news.urls'))
+    path('feeds/', include('feeds.urls'))
 ]
 
 # if settings.DEBUG:

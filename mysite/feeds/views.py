@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.utils import timezone
-from news.models import Articles
-from news.forms import ArticlesForm
+from feeds.models import Articles
+from feeds.forms import ArticlesForm
 from django.contrib import messages
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
@@ -26,7 +26,7 @@ def post_list(request):
         'user': user,
 
     }
-    return render(request, 'news/post_list.html', context)
+    return render(request, 'feeds/post_list.html', context)
 
 
 def post_create(request):
@@ -42,7 +42,7 @@ def post_create(request):
         'title': 'Post create',
         'form': form
     }
-    return render(request, 'news/post_create.html', context)
+    return render(request, 'feeds/post_create.html', context)
 
 
 def post_update(request, id):
@@ -63,7 +63,7 @@ def post_update(request, id):
         'form': form
     }
 
-    return render(request, 'news/post_create.html', context)
+    return render(request, 'feeds/post_create.html', context)
 
 
 def post_delete(request, id):
@@ -72,7 +72,7 @@ def post_delete(request, id):
     messages.success(request, "Post deleted!!!")
     if not request.user.is_staff:
         raise render(request, '404.html', status=404)
-    return redirect('news:post_list')
+    return redirect('feeds:post_list')
 
 
 def post_detail(request, id):
@@ -83,4 +83,4 @@ def post_detail(request, id):
     }
     if not request.user.is_staff:
         raise render(request, '404.html', status=404)
-    return render(request, 'news/post_detail.html', context)
+    return render(request, 'feeds/post_detail.html', context)

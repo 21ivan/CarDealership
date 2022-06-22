@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block head_title %}SVOE AVTO{% endblock head_title%}</title>
+    <title>{% block head_title %}LUX AVTO{% endblock head_title%}</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/post.css' %}">
@@ -18,10 +18,10 @@
 </head>
 <body>
     <div class="page-header">
-        <a href="/news/create/" class="top-menu"><span class="glyphicon glyphicon-plus"></span>Add post</a>
+        <a href="/feeds/create/" class="top-menu"><span class="glyphicon glyphicon-plus"></span>Add post</a>
         <a href="/"><h1>Main</h1></a>
     </div>
-    {% include 'news/message_display.html' %}
+    {% include 'feeds/message_display.html' %}
     <div class="content container">
         <div class="row">
             <div class="col-md-8">
