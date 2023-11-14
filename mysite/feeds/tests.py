@@ -13,7 +13,6 @@ def create_article():
     return Articles.objects.create(
         title='Test Title',
         content='Test Content',
-        # Add other required fields as needed
     )
 
 @pytest.mark.django_db
