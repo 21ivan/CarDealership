@@ -32,7 +32,7 @@ def post_list(request):
 def post_create(request):
     form = ArticlesForm(request.POST or None, request.FILES or None)
     if not request.user.is_staff:
-        raise render(request, '404.html', status=404)
+        raise render(request, 'User is not registered', status=404)
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
